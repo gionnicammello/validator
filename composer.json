@@ -2,11 +2,17 @@
     "name": "gdf/validator",
     "description": "Test composite design pattern with a simple validator",
     "type": "library",
+    "license": "proprietary",
     "authors": [
         {
             "name": "Gianluca Di Francisca",
             "email": "g.difrancisca@gmail.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "GDF\\Validator\\": "src"
+        }
+    }
 }
