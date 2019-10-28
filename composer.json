@@ -1,0 +1,12 @@
+{
+    "name": "gdf/validator",
+    "description": "Test composite design pattern with a simple validator",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Gianluca Di Francisca",
+            "email": "g.difrancisca@gmail.com"
+        }
+    ],
+    "require": {}
+}
