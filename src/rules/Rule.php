@@ -3,18 +3,27 @@
 
 namespace GDF\Validator\rules;
 
-
+/**
+ * Class Rule
+ * @package GDF\Validator
+ * Abstract class to be extended to become a component/rule of the validator package
+ */
 abstract class Rule implements IRule
 {
-    protected $errors=[];
-    protected $customError=null;
-    protected $value=null;
-    protected $name=null;
-    protected $defaultError='is invalid.';
+    protected $errors=[]; //array of errors
+    protected $customError=null;  //custom error message
+    protected $value=null; //value to check
+    protected $name=null; //name of the variable/filed/input
+    protected $defaultError='is invalid.'; //default error text
 
 
-
-
+    /**
+     * Rule constructor.
+     * Constructor has to be overridden if rule need more arguments.
+     * @param $name
+     * @param $value
+     * @param null $customError
+     */
     public function __construct($name, $value, $customError=null)
     {
         $this->value=$value;
@@ -24,34 +33,39 @@ abstract class Rule implements IRule
     }
 
 
-
-
-
+    /**
+     * Set the text for a custom error after object costructor
+     * @param $text
+     */
     public function setCustomError($text)
     {
         $this->customError=$text;
     }
 
 
-
-
+    /**
+     * Get the last error
+     * @return mixed|string
+     */
     public function getError()
     {
         return end($this->errors);
     }
 
 
-
-
-
+    /**
+     * Get all the set of errors in an array
+     * @return array
+     */
     public function getErrors()
     {
         return $this->errors;
     }
 
 
-
-
+    /**
+     * Add an error to the errors[] array
+     */
     protected function addError()
     {
         if($this->customError===null){
