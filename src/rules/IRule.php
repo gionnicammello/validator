@@ -1,7 +1,7 @@
 <?php
 
 
-namespace GDF\Validator\validators;
+namespace GDF\Validator\rules;
 
 
 interface IRule

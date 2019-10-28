@@ -4,8 +4,8 @@
 namespace GDF\Validator;
 
 
-use GDF\Validator\validators\IRule;
-use GDF\Validator\validators\Rule;
+use GDF\Validator\rules\IRule;
+use GDF\Validator\rules\Rule;
 
 class Validator extends Rule implements IRule
 {
