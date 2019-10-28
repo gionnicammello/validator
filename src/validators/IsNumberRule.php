@@ -6,6 +6,9 @@ namespace GDF\Validator\validators;
 
 class IsNumberRule extends Rule
 {
+    protected $defaultError=' must be a number';
+
+
 
 
     public function validate()

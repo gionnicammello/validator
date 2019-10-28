@@ -6,18 +6,25 @@ namespace GDF\Validator\validators;
 
 abstract class Rule implements IRule
 {
-    public $error=[];
+    protected $errors=[];
     protected $customError=null;
     protected $value=null;
-    protected $defaultError='Invalid Form';
+    protected $name=null;
+    protected $defaultError='is invalid.';
+
+
 
 
     public function __construct($name, $value, $customError=null)
     {
         $this->value=$value;
-        $this->defaultError=$name.' must be a number';
+        $this->name=$name;
+        $this->defaultError=$this->name.' '.$this->defaultError;
         $this->setCustomError($customError);
     }
+
+
+
 
 
     public function setCustomError($text)
@@ -26,17 +33,31 @@ abstract class Rule implements IRule
     }
 
 
+
+
     public function getError()
     {
-        return end($this->error);
+        return end($this->errors);
     }
+
+
+
+
+
+    public function getErrors()
+    {
+        return $this->errors;
+    }
+
+
+
 
     protected function addError()
     {
         if($this->customError===null){
-            $this->error[]=$this->defaultError;
+            $this->errors[$this->name]=$this->defaultError;
         }else{
-            $this->error[]=$this->customError;
+            $this->errors[$this->name]=$this->customError;
         }
     }
 

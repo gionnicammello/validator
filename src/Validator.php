@@ -14,8 +14,10 @@ class Validator extends Rule implements IRule
 
 
 
-    public function __construct()
+    public function __construct($name, $customError=null)
     {
+        $this->name=$name;
+        $this->setCustomError($customError);
     }
 
 
@@ -33,23 +35,19 @@ class Validator extends Rule implements IRule
     {
         foreach($this->rules as $rule){
             if(!$rule->validate()){
-                $this->addGroupError($rule->getError());
+                $this->errors=array_merge($this->errors,$rule->getErrors());
             }
         }
-        if(empty($this->error)){
+        if(empty($this->errors)){
             return true;
+        }
+        if($this->customError!==null){
+            $this->errors[$this->name]=$this->customError;
         }
         return false;
     }
 
 
-    protected function addGroupError($text)
-    {
-        if(!$this->customError){
-            $this->error[]=$text;
-        }else{
-            $this->error[]=$this->customError;
-        }
-    }
+
 
 }
