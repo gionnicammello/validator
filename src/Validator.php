@@ -11,7 +11,7 @@ use gionnicammello\Validator\rules\Rule;
  * Class Validator
  * This package implement composite design pattern to implement sigle validation or group validation with custom messages
  * Concrete class to collect multiple rules and set a custom error message for the entire set
- * @package GDF/Validator
+ * @package gionnicammello/Validator
  */
 class Validator extends Rule
 {

@@ -2,7 +2,7 @@
     "name": "gionnicammello/validator",
     "description": "Test composite design pattern with a simple validator",
     "type": "library",
-    "license": "proprietary",
+    "license": "Apache-2.0",
     "authors": [
         {
             "name": "Gianluca Di Francisca",
