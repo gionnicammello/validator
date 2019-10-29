@@ -11,7 +11,7 @@ namespace GDF\Validator\rules;
  */
 class IsNumberRule extends Rule
 {
-    protected $defaultError=' must be a number';
+    protected $defaultError='must be a number';
 
 
 

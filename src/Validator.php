@@ -13,7 +13,7 @@ use GDF\Validator\rules\Rule;
  * Concrete class to collect multiple rules and set a custom error message for the entire set
  * @package GDF/Validator
  */
-class Validator extends Rule implements IRule
+class Validator extends Rule
 {
 
     protected $rules=[]; //collection of rules to check with validate method
@@ -24,7 +24,7 @@ class Validator extends Rule implements IRule
      * @param $name
      * @param null $customError
      *
-     *set custom error to ger an error for the entire block of rules
+     * set custom error to ger an error for the entire block of rules
      */
     public function __construct($name, $customError=null)
     {

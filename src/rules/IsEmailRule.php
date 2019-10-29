@@ -12,7 +12,7 @@ namespace GDF\Validator\rules;
  */
 class IsEmailRule extends Rule
 {
-    protected $defaultError=' is not a valid email address';
+    protected $defaultError='is not a valid email address';
 
 
     public function validate(){
