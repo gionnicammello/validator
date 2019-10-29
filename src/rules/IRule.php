@@ -1,11 +1,11 @@
 <?php
 
 
-namespace GDF\Validator\rules;
+namespace gionnicammello\Validator\rules;
 
 /*
  * Interface IRule to be implemented in every Validators and Rules
- * @package GDF\Validator\rules
+ * @package gionnicammello\Validator\rules
  */
 interface IRule
 {

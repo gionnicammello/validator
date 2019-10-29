@@ -1,5 +1,5 @@
 {
-    "name": "gdf/validator",
+    "name": "gionnicammello/validator",
     "description": "Test composite design pattern with a simple validator",
     "type": "library",
     "license": "proprietary",
@@ -12,7 +12,7 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "GDF\\Validator\\": "src"
+            "gionnicammello\\Validator\\": "src"
         }
     }
 }

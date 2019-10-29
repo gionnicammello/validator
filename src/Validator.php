@@ -1,11 +1,11 @@
 <?php
 
 
-namespace GDF\Validator;
+namespace gionnicammello\Validator;
 
 
-use GDF\Validator\rules\IRule;
-use GDF\Validator\rules\Rule;
+use gionnicammello\Validator\rules\IRule;
+use gionnicammello\Validator\rules\Rule;
 
 /**
  * Class Validator

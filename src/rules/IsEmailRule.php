@@ -1,11 +1,11 @@
 <?php
 
 
-namespace GDF\Validator\rules;
+namespace gionnicammello\Validator\rules;
 
 /**
  * Class IsEmailRule
- * @package GDF\Validator
+ * @package gionnicammello\Validator
  * check if the value is a valid email address.
  * It cannot check if the email exist but only the format
  * This rule return true if the Variable is void. Use the IsRequiredRule in conjunction to make the value mandatory

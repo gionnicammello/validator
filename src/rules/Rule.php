@@ -1,11 +1,11 @@
 <?php
 
 
-namespace GDF\Validator\rules;
+namespace gionnicammello\Validator\rules;
 
 /**
  * Class Rule
- * @package GDF\Validator
+ * @package gionnicammello\Validator
  * Abstract class to be extended to become a component/rule of the validator package
  */
 abstract class Rule implements IRule
